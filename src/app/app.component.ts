@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Event} from '@angular/router';
+import {Task} from './core/Task.model';
 
 @Component({
   selector: 'tsk-root',
@@ -6,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tasks';
 }

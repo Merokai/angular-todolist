@@ -1,1 +1,4 @@
-<p>task-form works!</p>
+<form [formGroup]="form" class="d-flex flex-column w-100 ">
+  <input type="text" formControlName="title" placeholder="Title"/>
+  <input type="text" formControlName="description" placeholder="Description"/>
+</form>

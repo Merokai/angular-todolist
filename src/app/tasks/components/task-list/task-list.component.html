@@ -1,1 +1,24 @@
-<p>task-list works!</p>
+<ul class="container list-group">
+  <li *ngFor="let task of tasks" class="list-group-item" [ngClass]="{ completed: task.isCompleted }">
+    <div
+      class="row d-flex w-100 justify-content-between"
+    >
+      <div class="col align-content-center">
+        <button (click)="completeTask(task)">{{ task.isCompleted ? 'Done' : 'Todo' }}</button>
+      </div>
+      <div class="col">
+        <h5>{{ task.title }}</h5>
+      </div>
+      <div class="col">
+        <p>{{ task.description }}</p>
+      </div>
+      <div class="col">
+        <small>{{ task.createdOn | date }}</small>
+      </div>
+      <div class="col">
+        <button [routerLink]="['/tasks', task.id]">Edit</button>
+        <button (click)="deleteTask(task)">Delete</button>
+      </div>
+    </div>
+  </li>
+</ul>
